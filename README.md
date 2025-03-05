@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Online Quiz Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
+The Online Quiz Platform is a web-based application that allows users to create, take, and score quizzes. It includes authentication, quiz creation, practice mode, and result analysis.
 
-## Available Scripts
+## Technologies Used
+- **Frontend**: React.js (JavaScript/TypeScript)
+- **State Management**: Redux
+- **Styling**: Tailwind CSS / Bootstrap 5
 
-In the project directory, you can run:
+## Features
+1. **User Authentication**
+   - Login functionality to access quiz features.
 
-### `npm start`
+2. **Quiz Creation**
+   - Admins can add multiple-choice questions.
+   - Set a time limit for each question.
+   - Provide solutions for each question.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Practice Mode**
+   - Users can take quizzes in a simulated exam environment.
+   - Includes a timer for each question.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Scoring & Result Analysis**
+   - Users receive scores at the end of the test.
+   - Displays correct and incorrect answers for review.
 
-### `npm test`
+5. **Responsive Design**
+   - Optimized for both desktop and mobile devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation & Setup
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/your-repo/quiz-platform.git
+   cd quiz-platform
+   ```
 
-### `npm run build`
+2. **Install Dependencies**
+   ```sh
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Run the Application**
+   ```sh
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Folder Structure
+quiz-platform/
+├── node_modules/            # Installed dependencies
+├── public/                  # Static assets (images, HTML templates, etc.)
+├── src/                     # Source code
+│   ├── components/          # Reusable UI components
+│   │   ├── Login.js
+│   │   ├── Navbar.js
+│   │   ├── ProtectedRoute.js
+│   │   ├── QuizCreator.js
+│   │   ├── QuizResults.js
+│   │   ├── QuizTaker.js
+│   │   ├── Timer.js
+│   ├── pages/               # Application pages
+│   │   ├── Home.js
+│   │   ├── Practice.js
+│   ├── redux/               # Redux state management
+│   │   ├── slices/
+│   │   │   ├── authSlice.js
+│   │   │   ├── quizSlice.js
+│   │   ├── store.js
+│   ├── App.css              # Global styles
+│   ├── App.js               # Main application component
+│   ├── index.css            # Additional global styles
+│   ├── index.js             # Entry point
+│   ├── reportWebVitals.js   # Performance tracking
+│   ├── tailwind.config.js   # Tailwind CSS configuration
+├── .gitignore               # Git ignore file
+├── package-lock.json        # Dependency lock file
+├── package.json             # Project metadata and dependencies
+├── README.md                # Project documentation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+## Contributing
+1. Fork the repository.
+2. Create a new branch (`feature-name`).
+3. Commit your changes.
+4. Push to the branch and submit a PR.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
+This project is licensed under the MIT License.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
