@@ -23,8 +23,9 @@ const QuizResults = () => {
           // Calculate total marks for this quiz
           const totalMarks = quizResults.reduce((acc, result) => {
             const question = quiz.questions[result.questionId];
-            return acc + (result.isCorrect ? question.marks : 0);
-          }, 0);
+            return acc + (result.isCorrect ? Number(question.marks) : 0);
+        }, 0);
+        
 
           // Calculate total correct answers for this quiz
           const totalCorrectAnswers = quizResults.filter((result) => result.isCorrect).length;
